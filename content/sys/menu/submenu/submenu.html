@@ -1,0 +1,17 @@
+<pills-dif class="ractive-submenu-area" selected='{{selected}}'>
+  {{#menu:k}}
+    {{#if !isItemEmpty(k)}}
+      <pill class="ractive-submenu-item" name="{{k}}" on-liClick='sub_menu_load'>{{.}}</pill>
+    {{/if}}
+  {{/}}
+  {{#menu:k}}
+    {{#if isItemEmpty(k)}}
+      <li class="ractive-submenu-item no-hover" role="presentation"></li>
+    {{/if}}
+  {{/}}
+</pills-dif>
+{{#update_action}}
+<div class="submenu-update" on-click="update_action">
+  <icon-refresh />
+</div>
+{{/}}

@@ -1,0 +1,59 @@
+<div id="rating-results-container">
+
+  {{#if (total === 0)}}
+    <!-- <div class="no-rates">{{_e('No rates yet')}}</div> -->
+    <div class="rating no-rates-1">
+      <span class="glyphicon glyphicon-star-empty blue-wt"></span>
+      <span class="glyphicon glyphicon-star-empty blue-wt"></span>
+      <span class="glyphicon glyphicon-star-empty blue-wt"></span>
+      <span class="glyphicon glyphicon-star-empty blue-wt"></span>
+      <span class="glyphicon glyphicon-star-empty blue-wt"></span>
+    </div>
+
+  {{else}}
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="well well-sm" style="margin-bottom: 0; padding: 9px 9px 0px 9px;">
+
+        <div class="row">
+          <div class="col-xs-5 text-center no-padding">
+            <h1 class="rating-num">{{average}}</h1>
+            <div class="rating">
+              <span class="glyphicon glyphicon-star{{#if starsNum<1}}-empty{{/if}} blue-wt"></span>
+              <span class="glyphicon glyphicon-star{{#if starsNum<2}}-empty{{/if}} blue-wt"></span>
+              <span class="glyphicon glyphicon-star{{#if starsNum<3}}-empty{{/if}} blue-wt"></span>
+              <span class="glyphicon glyphicon-star{{#if starsNum<4}}-empty{{/if}} blue-wt"></span>
+              <span class="glyphicon glyphicon-star{{#if starsNum<5}}-empty{{/if}} blue-wt"></span>
+            </div>
+            <div>
+              <span class="glyphicon glyphicon-user"></span> {{total}} {{_e('total')}}
+            </div>
+          </div>
+
+          <div class="col-xs-7">
+            <div class="row rating-desc">
+              {{#each percents}}
+                <div class="col-xs-2 col-md-2 text-right no-padding">
+                  <span class="glyphicon glyphicon-star"></span>{{5 - @index}}
+                </div>
+                <div class="col-xs-10 col-md-10">
+                  <div class="progress no-shadow">
+                    <div class="progress-bar bar-colors no-shadow" role="progressbar"
+                      aria-valuenow="{{.}}" aria-valuemin="0" aria-valuemax="100"
+                      style="width: {{.}}%">
+                      <span class="sr-only">{{.}}%</span>
+                    </div>
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {{/if}}
+
+</div>

@@ -1,0 +1,41 @@
+<form-group class="{{#class}}{{class}}{{/}}">
+  <label>
+    {{label}}
+    {{#if desc}}
+    <strong class="query-wt hint-{{position_help}}-s-med position-relative {{#if help_anim}}hint-{{help_anim}}{{/if}}" data-hint="{{desc}}">?</strong>
+    {{/if}}
+  </label>
+  <select class="form-control bankcard_sel" {{#!disabled}}name="card_{{form_name}}"{{/}} {{#disabled}}disabled="true"{{/}} value='{{card}}' on-change="changed">
+          <option value="{{nothing_val}}">{{nothing_string}}</option>
+    {{#cards:k}}
+    <option value="{{k}}">{{.}}</option>
+    {{/}}
+  </select>
+  {{#if 0 != card}}
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <label>
+      {{card_num}}
+    </label>
+    <div class="form-group card_nums">
+      <div class="col-md-3 col-sm-6 col-xs-12 bankcard_num_1">
+        <input name="rr4" type="number" maxlength="4" min="1" max="9999" {{#!disabled}}name="num_1_{{form_name}}"{{/}} class="form-control" value='{{num[0]}}' {{#disabled}}disabled="true"{{/}} placeholder="{{num_placeholder}}" />
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 bankcard_num_2">
+        <input name="rr3"  type="number" maxlength="4" min="1" max="9999" {{#!disabled}}name="num_2_{{form_name}}"{{/}} class="form-control" value='{{num[1]}}' {{#disabled}}disabled="true"{{/}} placeholder="{{num_placeholder}}" />
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 bankcard_num_3">
+        <input name="rr2"  type="number" maxlength="4" min="1" max="9999" {{#!disabled}}name="num_3_{{form_name}}"{{/}} class="form-control" value='{{num[2]}}' {{#disabled}}disabled="true"{{/}} placeholder="{{num_placeholder}}" />
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 bankcard_num_4">
+        <input name="rr1"  type="number" maxlength="4" min="1" max="9999" {{#!disabled}}name="num_4_{{form_name}}"{{/}} class="form-control" value='{{num[3]}}' {{#disabled}}disabled="true"{{/}} placeholder="{{num_placeholder}}" />
+      </div>
+    </div>
+    <label>
+      {{exp_label}}
+    </label>
+    <div class="col-md-3 col-sm-6 col-xs-12 bankcard_num_3">
+      <input type="text" maxlength="5" {{#!disabled}}name="exp_{{form_name}}"{{/}} class="form-control bankcard_exp" value='{{exp}}' {{#disabled}}disabled="true"{{/}} placeholder="{{exp_placeholder}}" />
+    </div>
+  </div>
+  {{/if}}
+</form-group>

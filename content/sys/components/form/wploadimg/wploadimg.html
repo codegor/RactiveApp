@@ -1,0 +1,16 @@
+<form-group class="{{#class}}{{class}}{{/}}">
+    <div class="image_upload component-form-wp-load-img">
+        <div>
+            {{label}}
+            {{#if desc}}
+            <strong class="query-wt hint-{{position_help}}-s-med position-relative {{#if help_anim}}hint-{{help_anim}}{{/if}}" data-hint="{{desc}}">?</strong>
+            {{/if}}
+        </div>
+        <img src="{{src}}" width="{{w}}px" height="{{h}}px" />
+        <div>
+            <input type="hidden" {{#!disabled}}name="{{form_name}}"{{/}} twoway="true"  id="{{form_name}}" value="{{value}}" />
+            <button class="load_img button" {{#disabled}}disabled="true"{{/}} on-click="load">{{button}}</button>
+            <button class="remove_img button" {{#disabled}}disabled="true"{{/}} on-click="reset_def">&times;</button>
+        </div>
+    </div>
+</form-group>

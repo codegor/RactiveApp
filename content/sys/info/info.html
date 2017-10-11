@@ -1,0 +1,293 @@
+<div class="container">
+  <div class="fll ractive-info-data-cell hidden-xs hidden-sm">
+    <p class="data-time">
+      <span class="data-time-before">{{moment(datetime).format('LTS')}}</span>
+      | {{moment(datetime).format('DD.MM.YYYY')}}
+    </p>
+    <info-clock />
+  </div>
+
+  <div class="hidden-xs hidden-sm">
+  <div class="fll ractive-info-data hidden-xs hidden-sm">
+    {{#info:n}}
+    <div class="flr ractive-info-data-cell webtaransfer-pointer" on-click="action_{{n}}">
+      <div class="ractive-info-area flr">
+
+        <h3 data-name="{{n}}">{{name}}</h3>
+
+        <p>
+          {{#if ed.position=='first'}}
+          <span>{{ed.text}}</span>
+          {{/if}}
+          {{getInt(val)}}
+          <span class="info-val-decimal">{{getDecimal(val)}}</span>
+
+          {{#if ed.position=='last'}}
+          <span>{{ed.text}}</span>
+          {{/if}}
+
+          {{#if n=='peoples'}}
+          /
+          {{#if ed_u.position=='first'}}
+          <span>{{ed_u.text}}</span>
+          {{/if}}
+          {{val_u}}
+          {{#if ed_u.position=='last'}}
+          <span>{{ed_u.text}}</span>
+          {{/if}}
+          {{/if}}
+        </p>
+      </div>
+    </div>
+    {{/}}
+  </div>
+  </div>
+
+
+<!--
+        <li data-target="#info-carousel-id" data-slide-to="{{@index}}"
+          {{#if (@index === 0)}}class="active"{{/if}}>
+        </li>
+-->
+  <div class="hidden-md hidden-lg ractive-info-data">
+    <div id="info-carousel-id" class="carousel slide" data-ride="carousel" style="margin-bottom: 20px;">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#info-carousel-id" data-slide-to="0" class="active"></li>
+        <li data-target="#info-carousel-id" data-slide-to="1"></li>
+        {{#info:n}}
+          <li data-target="#info-carousel-id" data-slide-to="{{@index + 2}}"></li>
+        {{/}}
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox" style="text-align: center;">
+        <div class="item-container">
+
+          <div class="item active">
+            <div style="color: #fff; padding: 15px 0px;">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="empty-cell"></td>
+                    <td class="plastic-image"></td>
+                    <td class="issue-borrow-cell">{{_e('Issue')}}<br>{{_e('Borrow')}}</td>
+                    <td>
+                      {{demand_percent}}<br>{{guarant_percent}}
+                    </td>
+                    <td>
+                      <span class="glyphicon glyphicon-arrow-up green-wt" aria-hidden="true"></span><br>
+                      <span class="glyphicon glyphicon-arrow-down orange-wt" aria-hidden="true"></span>
+                    </td>
+
+                    <td class="empty-cell"></td>
+                    <td class="empty-cell grey-left-border"></td>
+
+                    <td class="perfect-image"></td>
+                    <td class="issue-borrow-cell">{{_e('Issue')}}<br>{{_e('Borrow')}}</td>
+                    <td>
+                      {{demand_percent_paysys_perfectmoney}}<br>
+                      {{guarant_percent_paysys_perfectmoney}}
+                    </td>
+                    <td>
+                      <span class="glyphicon glyphicon-arrow-up green-wt" aria-hidden="true"></span><br>
+                      <span class="glyphicon glyphicon-arrow-down orange-wt" aria-hidden="true"></span>
+                    </td>
+                    <td class="empty-cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="item">
+            <div style="color: #fff; padding: 15px 0px;">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="empty-cell"></td>
+                    <td class="okpay-image"></td>
+                    <td class="issue-borrow-cell">{{_e('Issue')}}<br>{{_e('Borrow')}}</td>
+                    <td>
+                      {{demand_percent_paysys_okpay}}<br>
+                      {{guarant_percent_paysys_okpay}}
+                    </td>
+                    <td>
+                      <span class="glyphicon glyphicon-arrow-up green-wt" aria-hidden="true"></span><br>
+                      <span class="glyphicon glyphicon-arrow-down orange-wt" aria-hidden="true"></span>
+                    </td>
+
+                    <td class="empty-cell"></td>
+                    <td class="empty-cell grey-left-border"></td>
+
+                    <td class="payeer-image"></td>
+                    <td class="issue-borrow-cell">{{_e('Issue')}}<br>{{_e('Borrow')}}</td>
+                    <td>
+                      {{demand_percent_paysys_payeer}}<br>
+                      {{guarant_percent_paysys_payeer}}
+                    </td>
+                    <td>
+                      <span class="glyphicon glyphicon-arrow-up green-wt" aria-hidden="true"></span><br>
+                      <span class="glyphicon glyphicon-arrow-down orange-wt" aria-hidden="true"></span>
+                    </td>
+                    <td class="empty-cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+          {{#info:n}}
+          <div class="item"> <!-- <div class="item {{#if (@index === 0)}}active{{/if}}"> -->
+
+            <div class="flr ractive-info-data-cell webtaransfer-pointer" on-click="action_{{n}}">
+              <div class="ractive-info-area flr">
+                <h3 data-name="{{n}}">{{name}}</h3>
+                <p>
+                  {{#if ed.position=='first'}}
+                  <span>{{ed.text}}</span>
+                  {{/if}}
+                  {{getInt(val)}}
+                  <span class="info-val-decimal">{{getDecimal(val)}}</span>
+
+                  {{#if ed.position=='last'}}
+                  <span>{{ed.text}}</span>
+                  {{/if}}
+
+                  {{#if n=='peoples'}}
+                  /
+                  {{#if ed_u.position=='first'}}
+                  <span>{{ed_u.text}}</span>
+                  {{/if}}
+                  {{val_u}}
+                  {{#if ed_u.position=='last'}}
+                  <span>{{ed_u.text}}</span>
+                  {{/if}}
+                  {{/if}}
+                </p>
+              </div>
+            </div>
+
+          </div>
+          {{/}}
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#info-carousel-id" role="button" data-slide="prev"
+        style="background-image: none; margin-top: -20px;">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#info-carousel-id" role="button" data-slide="next"
+        style="background-image: none; margin-top: -20px;">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="info-update" on-click="info_update">
+    <icon-refresh />
+  </div>
+</div>
+
+
+<!-- =========== ******* =========== -->
+<!-- =========== BANNERS =========== -->
+<!-- =========== ******* =========== -->
+<!-- {{#if showBannersDebug}} -->
+{{#if show_banners}}
+<div class="container">
+  <div id="banner-carousel-id" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" style="text-align: center;">
+
+      <div class="{{#if !isLess992}}item active{{/if}} hidden-xs hidden-sm">
+        <div class="font-white-inline-block">
+          <table>
+            <tbody>
+              <tr>
+                <td class="empty-cell grey-left-border"></td>
+                <td class="plastic-image"></td>
+                <td class="issue-borrow-cell">{{_e('Issue')}}<br>{{_e('Borrow')}}</td>
+                <td>
+                  {{demand_percent}}<br>{{guarant_percent}}
+                </td>
+                <td>
+                  <span class="glyphicon glyphicon-arrow-up green-wt" aria-hidden="true"></span><br>
+                  <span class="glyphicon glyphicon-arrow-down orange-wt" aria-hidden="true"></span>
+                </td>
+
+                <td class="empty-cell"></td>
+                <td class="empty-cell grey-left-border"></td>
+
+                <td class="perfect-image"></td>
+                <td class="issue-borrow-cell">{{_e('Issue')}}<br>{{_e('Borrow')}}</td>
+                <td>
+                  {{demand_percent_paysys_perfectmoney}}<br>
+                  {{guarant_percent_paysys_perfectmoney}}
+                </td>
+                <td>
+                  <span class="glyphicon glyphicon-arrow-up green-wt" aria-hidden="true"></span><br>
+                  <span class="glyphicon glyphicon-arrow-down orange-wt" aria-hidden="true"></span>
+                </td>
+                <td class="empty-cell grey-right-border"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="font-white-inline-block">
+          <table>
+            <tbody>
+              <tr>
+                <td class="empty-cell grey-left-border"></td>
+                <td class="okpay-image"></td>
+                <td class="issue-borrow-cell">{{_e('Issue')}}<br>{{_e('Borrow')}}</td>
+                <td>
+                  {{demand_percent_paysys_okpay}}<br>
+                  {{guarant_percent_paysys_okpay}}
+                </td>
+                <td>
+                  <span class="glyphicon glyphicon-arrow-up green-wt" aria-hidden="true"></span><br>
+                  <span class="glyphicon glyphicon-arrow-down orange-wt" aria-hidden="true"></span>
+                </td>
+
+                <td class="empty-cell"></td>
+                <td class="empty-cell grey-left-border"></td>
+
+                <td class="payeer-image"></td>
+                <td class="issue-borrow-cell">{{_e('Issue')}}<br>{{_e('Borrow')}}</td>
+                <td>
+                  {{demand_percent_paysys_payeer}}<br>
+                  {{guarant_percent_paysys_payeer}}
+                </td>
+                <td>
+                  <span class="glyphicon glyphicon-arrow-up green-wt" aria-hidden="true"></span><br>
+                  <span class="glyphicon glyphicon-arrow-down orange-wt" aria-hidden="true"></span>
+                </td>
+                <td class="empty-cell grey-right-border"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- {{#if show_banners}} -->
+        {{#each banners}}
+        <div class="item {{#if (isLess992 && @index === 0)}}active{{/if}}">
+          <div class="font-white-inline-block">
+            <img src="{{.}}" alt="{{'Banner ' + (@index + 1)}}" height="45" />
+          </div>
+        </div>
+        {{/each}}
+      <!-- {{/if}} -->
+
+    </div>
+
+  </div>
+</div>
+{{/if}}

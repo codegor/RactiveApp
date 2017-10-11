@@ -1,0 +1,89 @@
+#user-rating-info-container .blue-wt {
+  color: #3190f0;
+}
+
+#user-rating-info-container .user-info {
+	background-color: #FbFbFb;
+	border: 1px solid #EFEFEF;
+	padding: 15px;
+	border-radius: 7px;
+}
+#user-rating-info-container .photo {
+  border: 1px solid #777;
+  border-radius: 50%;
+  width: 100%;
+}
+/*
+@media (min-width: 500px) and (max-width: 767px) {
+  #user-rating-info-container .photo {
+    border: 1px solid #777;
+    border-radius: 50%;
+    width: 50%;
+  }
+}
+*/
+#user-rating-info-container .user-info-name {
+	font-size: 28px;
+	margin: 5px 0 0 0;
+  color: #ff5000;
+}
+#user-rating-info-container .user-info-date {
+  /* margin-left: 10px; */
+	font-size: 15px;
+  color: #aaa;
+}
+
+#user-rating-info-container .user-info-socials {
+  margin-top: 5px;
+}
+#user-rating-info-container .social-icon {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  margin-right: 3px;
+}
+#user-rating-info-container .social-icon.net_twitter {
+	background:url("assets/img/twitter.png") 0 0 no-repeat;
+  background-size: contain;
+}
+#user-rating-info-container .social-icon.net_vkontakte {
+	background:url("assets/img/vkontakte.png") 0 0 no-repeat;
+  background-size: contain;
+}
+#user-rating-info-container .social-icon.net_facebook {
+	background:url("assets/img/facebook.png") 0 0 no-repeat;
+  background-size: contain;
+}
+#user-rating-info-container .social-icon.net_mail_ru {
+	background:url("assets/img/mail_ru.png") 0 0 no-repeat;
+  background-size: contain;
+}
+#user-rating-info-container .social-icon.net_google_plus {
+	background:url("assets/img/google_plus.png") 0 0 no-repeat;
+  background-size: contain;
+}
+#user-rating-info-container .social-icon.net_odnoklassniki {
+	background:url("assets/img/odnoklassniki.png") 0 0 no-repeat;
+  background-size: contain;
+}
+#user-rating-info-container .social-icon.net_wt_social {
+	background:url("assets/img/wt_social.png") 0 0 no-repeat;
+  background-size: contain;
+}
+
+#user-rating-info-container .user-info-ratings {
+  margin-top: 5px;
+}
+
+#user-rating-info-container .show-if-lg-screen { display: none; }
+#user-rating-info-container .show-if-mobile { display: none; }
+@media (max-width: 599px) {
+  #user-rating-info-container .show-if-mobile {
+    display: block;
+  }
+}
+@media (min-width: 600px) {
+  #user-rating-info-container .show-if-lg-screen {
+    display: block;
+  }
+}

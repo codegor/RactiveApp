@@ -1,0 +1,41 @@
+#transactions-list-container .blue-wt {
+  color: #3190f0;
+}
+
+#transactions-list-container .id-icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: -2px 2px 0 0;
+  padding: 0 0;
+}
+
+#transactions-list-container .shevron {
+  color: #fff;
+  background-color: #3190f0;
+  cursor: pointer;
+  width: 20px;
+}
+
+#transactions-list-container .show-if-lg-screen { display: none; }
+#transactions-list-container .show-if-mobile { display: none; }
+
+@media (max-width: 599px) {
+  #transactions-list-container .show-if-mobile {
+    display: table-cell;
+  }
+}
+@media (min-width: 600px) {
+  #transactions-list-container .show-if-lg-screen {
+    display: table-cell;
+  }
+}
+
+#transactions-list-container .inner {
+  padding-right: 25px;
+  font-weight: bold;
+}
+
+#transactions-list-container .bg-grey {
+  background-color: #f7f7f7;
+}

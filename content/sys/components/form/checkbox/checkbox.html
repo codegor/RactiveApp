@@ -1,0 +1,11 @@
+<form-group class="form-inline{{#class}} {{class}}{{/}}">
+    <div class="checkbox">
+        <label on-click="selectRadio()">
+            <input class="checkboxb{{#class}} {{class}}{{/}}"{{#!disabled}} name="{{form_name}}"{{/}} twoway="false" type="checkbox"{{#id}} id="{{id}}"{{/}} {{#value}} checked{{/}}{{#disabled}} disabled="true"{{/}} style="-webkit-appearance: checkbox !important;" />
+            {{label}}
+            {{#if desc}}
+            <strong class="query-wt hint-{{position_help}}-s-med position-relative {{#if help_anim}}hint-{{help_anim}}{{/if}}" data-hint="{{desc}}">?</strong>
+            {{/if}}
+        </label>
+    </div>
+</form-group>

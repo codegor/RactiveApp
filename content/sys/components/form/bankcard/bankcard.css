@@ -1,0 +1,15 @@
+span.nums {
+    position: absolute;
+    right: -4px;
+    top: 29px;
+}
+
+
+@media   (max-width: 767px) {
+
+    span.nums {
+        position: absolute;
+        right: 16px;
+        top: 67px;
+    }
+}

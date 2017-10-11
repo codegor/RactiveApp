@@ -1,0 +1,14 @@
+<form-group class="{{#class}}{{class}}{{/}}">
+    <b-label>
+        {{label}}
+        {{#if desc}}
+        <strong class="query-wt hint-{{position_help}}-s-med position-relative {{#if help_anim}}hint-{{help_anim}}{{/if}}" data-hint="{{desc}}">?</strong>
+        {{/if}}
+    </b-label>
+    <select class="form-control" {{#!disabled}}name="{{form_name}}"{{/}} {{#disabled}}disabled="true"{{/}} value='{{value}}' on-change="changed">
+        <option value="{{nothing_val}}">{{nothing_string}}</option>
+        {{#options:k}}
+        <option value="{{unclear_key(k)}}">{{.}}</option>
+        {{/}}
+    </select>
+</form-group>

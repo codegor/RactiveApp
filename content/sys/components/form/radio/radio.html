@@ -1,0 +1,17 @@
+<form-group class="form-inline">
+    <b-label>{{label}}</b-label>
+    <row selected="{{option}}" class="component-form-mt-10" style="margin-left: 0;">
+        <div style="margin-left: 15px;">
+            {{#items:k}}
+            <col-md-4>
+                <radio class="radiob" name="{{name}}" value="{{value}}" on-clicked="changed">
+                    {{label}}
+                    {#if desc}}
+                    <strong class="query-wt hint-{{position_help}}-s-med position-relative {{#if help_anim}}hint-{{help_anim}}{{/if}}" data-hint="{{desc}}">?</strong>
+                    {{/if}}
+                </radio>
+            </col-md-4>
+            {{/}}
+        </div>
+    </row>
+</form-group>

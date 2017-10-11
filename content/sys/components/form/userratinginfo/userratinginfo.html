@@ -1,0 +1,62 @@
+<div id="user-rating-info-container">
+  <div class="user-info">
+
+    <div class="show-if-lg-screen">
+      <div class="row">
+        <div class="col-xs-3 text-center">
+          <img src="{{photo}}" class="photo" alt="{{name}}" />
+        </div>
+        <div class="col-xs-9" style="padding-left:0px;">
+          <div>
+            <span class="user-info-name">{{name}}</span><br>
+            <span class="user-info-date">{{_e('Registration')}}: {{regDate}}</span>
+          </div>
+          <div class="user-info-socials">
+            <form-userportfel id_user={{id_user}} />
+            {{#if docs}}
+              <form-viewdocsimages docs={{docs}} name={{name}} />&nbsp;
+            {{/if}}
+            {{#each socials}}
+              <a class="social-icon net_{{name}}" {{#if url}}href={{url}} {{/if}}
+                title="{{name}} account" target="_blank"></a>
+            {{/each}}
+          </div>
+          <div class="user-info-ratings">
+            <form-ratingresults rate_by_star={{rate_by_star}} />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-if-mobile">
+      <div class="row" style="display: flex;">
+        <div class="col-xs-3 text-center">
+          <img src="{{photo}}" class="photo" alt="{{name}}" />
+        </div>
+        <div class="col-xs-9" style="padding-left:0px;">
+          <div>
+            <span class="user-info-name">{{name}}</span><br>
+            <span class="user-info-date">{{_e('Registration')}}: {{regDate}}</span>
+          </div>
+          <div class="user-info-socials">
+            {{#if docs}}
+              <form-viewdocsimages docs={{docs}} name={{name}} />&nbsp;
+            {{/if}}
+            {{#each socials}}
+              <a class="social-icon net_{{name}}" {{#if url}}href={{url}} {{/if}}
+                title="{{name}} account" target="_blank"></a>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <div class="user-info-ratings">
+            <form-ratingresults rate_by_star={{rate_by_star}} />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

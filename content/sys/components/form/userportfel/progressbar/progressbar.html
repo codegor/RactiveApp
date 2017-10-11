@@ -1,0 +1,35 @@
+<div class="user-portfel-progress-bar">
+
+  {{title}}:
+    {{#if (total_num === 0)}}
+      <span class="{{palette}}-wt">{{_e('No orders')}}</span>
+    {{else}}
+      <span class="{{palette}}-wt">${{formatData(total_sum, 2)}}</span>
+
+      <div class="progress no-shadow" style="margin: 3px 0px;">
+        <div class="progress-bar bar-dark-{{palette}} no-shadow"
+          style="width: {{paid_percent}}%;"
+          title="{{_e('Paid') + ': ' + paid_num + ' ' + _e('orders')}}"
+        > <span class="sr-only">{{paid_percent}}%</span>
+        </div>
+        <div class="progress-bar bar-{{palette}} no-shadow"
+          style="width: {{active_percent}}%;"
+          title="{{_e('Active') + ': ' + active_num + ' ' + _e('orders')}}"
+        > <span class="sr-only">{{active_percent}}%</span>
+        </div>
+        <div class="progress-bar bar-light-{{palette}} no-shadow"
+          style="width: {{overdue_percent}}%"
+          title="{{_e('Overdue') + ': ' + overdue_num + ' ' + _e('orders')}}"
+        > <span class="sr-only">{{overdue_percent}}%</span>
+        </div>
+      </div>
+
+      <div style="font-size: 11px;">
+        {{subtitle}}:
+        <span class="{{palette}}-wt">{{overdue_percent}}%</span>
+        ({{formatData(overdue_num, 0)}} {{_e('from')}} {{formatData(total_num, 0)}})
+      </div>
+
+    {{/if}}
+
+</div>

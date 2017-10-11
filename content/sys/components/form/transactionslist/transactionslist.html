@@ -1,0 +1,72 @@
+<div id="transactions-list-container">
+  <div class="">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>{{_e(' ')}}</th>
+              <th>{{_e('Type')}}</th>
+              <th class="show-if-lg-screen">{{_e('Account')}}</th>
+              <th class="show-if-lg-screen">{{_e('$')}}</th>
+              <th class="show-if-lg-screen">{{_e('%')}}</th>
+              <th class="show-if-lg-screen">{{_e('+$')}}</th>
+              <th>{{_e('Name')}}</th>
+              <th class="show-if-mobile">{{_e(' ')}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each transactions_list}}
+              <tr>
+                <td>
+                  <input type="checkbox" checked="{{checked}}" />
+                </td>
+                <td>
+                  <span class="id-icon" style="{{id_icon_style}}"></span> {{id}}
+                </td>
+                <td class="show-if-lg-screen">{{account}}</td>
+                <td class="show-if-lg-screen">{{summa}}</td>
+                <td class="show-if-lg-screen">{{percent}}</td>
+                <td class="show-if-lg-screen">{{profit}}</td>
+                <td>{{name}}</td>
+                <td class="show-if-mobile shevron" on-click="toggle_show_details:{{@index}}">
+                  <span class="glyphicon glyphicon-chevron-{{#if opened}}up{{else}}down{{/if}}"
+                    style="vertical-align: text-top;"
+                  ></span>
+                </td>
+              </tr>
+              {{#if opened}}
+                <tr intro-outro="fade:500" class="bg-grey">
+                  <td> </td>
+                  <td class="text-right inner">{{_e('Account')}}</td>
+                  <td>{{account}}</td>
+                  <td> </td>
+                </tr>
+                <tr intro-outro="fade:600" class="bg-grey">
+                  <td> </td>
+                  <td class="text-right inner">{{_e('$')}}</td>
+                  <td>{{summa}}</td>
+                  <td> </td>
+                </tr>
+                <tr intro-outro="fade:700" class="bg-grey">
+                  <td> </td>
+                  <td class="text-right inner">{{_e('%')}}</td>
+                  <td>{{percent}}</td>
+                  <td> </td>
+                </tr>
+                <tr intro-outro="fade:800" class="bg-grey">
+                  <td> </td>
+                  <td class="text-right inner">{{_e('+$')}}</td>
+                  <td>{{profit}}</td>
+                  <td> </td>
+                </tr>
+              {{/if}}
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,73 @@
+.blue-wt {
+  color: #3190f0;
+}
+.orange-wt {
+  color: #ff5000;
+}
+.grey-wt {
+  color: #405767
+}
+
+#user-portfel-container {
+  position: relative;
+  z-index: 890;
+}
+
+#user-portfel-container .icon-block {
+}
+
+#user-portfel-container .content-block {
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  width: 100%;
+  background-color: #ecf1f4;
+  border-radius: 0 2px 2px 2px;
+  box-shadow: 5px 5px 8px #aaaaaa;
+}
+
+#user-portfel-container .content-title {
+  width: 100%;
+  border-top: 1px solid #fff;
+  padding: 5px 10px;
+  background-color: #3190f0;
+  color: #fff;
+  font-size: 16px;
+}
+
+#user-portfel-container .portfel_icon {
+  float: left;
+  margin: 0px 0px 0 0;
+  cursor: pointer;
+}
+
+#user-portfel-container .summa {
+  font-size: 28px;
+  font-weight: normal;
+  margin: -5px 0px;
+}
+
+#user-portfel-container .hr-white {
+  border-color: white;
+  margin: 10px 0px;
+}
+#user-portfel-container .hr-white-1 {
+  border-color: white;
+  margin: 10px 0px 5px 0px;
+}
+
+#user-portfel-container .legend-dark-orange {
+  padding: 0 4px;
+  color: #eee;
+  background-color: #ff5000;
+}
+#user-portfel-container .legend-orange {
+  padding: 0 4px;
+  color: #eee;
+  background-color: #f98855;
+}
+#user-portfel-container .legend-light-orange {
+  padding: 0 4px;
+  color: #fff;
+  background-color: #f2c0aa;
+}

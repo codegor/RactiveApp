@@ -1,0 +1,4 @@
+<span class="{{#class}} {{class}}{{/}} ios-toggle-cont">
+  <input type="checkbox" id="{{toggle_id}}" class="ios-toggle" value='true'/>
+  <label on-click="selectRadio()" for="{{toggle_id}}"{{#(!disabled && form_name)}} name="{{form_name}}" twoway="false"{{/}}{{#value}} checked{{/}}{{#disabled}} disabled="true"{{/}} class="checkbox-label" data-off="{{off}}" data-on="{{on}}"></label>
+</span>

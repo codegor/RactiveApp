@@ -1,0 +1,119 @@
+#show-testimonial-container .blue-wt {
+  color: #3190f0;
+}
+#show-testimonial-container .bar-colors {
+  color: black;
+  background-color: #d5e8fc;
+}
+#show-testimonial-container .no-shadow {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#show-testimonial-container .testimonial {
+	background-color: #FbFbFb;
+	border: 1px solid #EFEFEF;
+	padding: 15px;
+	border-radius: 3px;
+	margin-bottom: 15px;
+}
+
+#show-testimonial-container .photo-container {
+  position: relative;
+  width: 100%;
+}
+#show-testimonial-container .photo-container:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+#show-testimonial-container .photo-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #777;
+  border-radius: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*
+#show-testimonial-container .photo {
+  border: 1px solid #777;
+  border-radius: 50%;
+  width: 100%;
+}
+@media (min-width: 500px) and (max-width: 767px) {
+  #show-testimonial-container .photo {
+    border: 1px solid #777;
+    border-radius: 50%;
+    width: 50%;
+  }
+}
+*/
+
+#show-testimonial-container .testimonial-name {
+	font-size: 22px;
+	margin: 5px 0;
+  color: #ff5000;
+}
+#show-testimonial-container .id-icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: -2px 2px 0 0;
+  padding: 0 0;
+}
+#show-testimonial-container .id-number {
+  color: #999;
+}
+#show-testimonial-container .testimonial-date {
+	font-size: 14px;
+  color: #999;
+}
+#show-testimonial-container .testimonial-rate {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+#show-testimonial-container .testimonial-description {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+#show-testimonial-container .testimonial-reply-l {
+  display: inline-block;
+  color: #3190f0;
+  cursor: pointer;
+}
+#show-testimonial-container .testimonial-reply-r {
+  display: inline-block;
+  color: #3190f0;
+  float: right;
+}
+#show-testimonial-container .spam-label {
+  color: #000000;
+  font-weight: normal;
+}
+#show-testimonial-container .reply-name {
+  color: #ff5000;
+}
+#show-testimonial-container .reply-text {
+  margin-top: 5px;
+}
+
+#show-testimonial-container .textarea-style {
+  width: 100%;
+  padding: 7px 10px;
+}
+#show-testimonial-container .reply-form-300 {
+  color: #999;
+}
+
+#show-testimonial-container hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#show-testimonial-container .reply-container {
+  width: 100%;
+  padding: 0 15px;
+}

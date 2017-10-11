@@ -1,0 +1,100 @@
+<div id="user-portfel-container">
+{{#if show_portfel}}
+
+  <div class="icon-block">
+    {{#icons:k}}
+      <a class="portfel_icon" on-click="toggle_show_data"
+        title="{{#if img_names[k] === 'portfel.png'}}User portfolio{{/if}}"
+      ><img src="{{base_img_path}}{{img_names[k]}}" style="padding-right: 10px;"></a>
+    {{/}}
+  </div>
+
+  {{#if isDataShown}}
+  <div class="content-block">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="content-title">
+          {{_e('Portfolio')}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding: 0 15px;">
+      {{#portfolio:item}}
+
+        <div class="col-xs-12 col-sm-6 col-md-6" style="padding-top: 10px;">
+          {{titles[item]}}
+          <div class="summa grey-wt">$ {{formatData(total_sum, 0)}}</div>
+          {{total_num}} {{_e('orders')}}
+          <hr class="hr-white" />
+
+          <form-userportfel-progressbar
+            title="{{_e('Guarant')}}" subtitle="{{_e('Overdue')}}"
+            palette="orange" total_sum="{{formatData(garant.total_sum, 2)}}"
+            total_num={{garant.total_num}}
+            paid_num={{garant.paid.num}}
+            active_num={{garant.active.num}}
+            overdue_num={{garant.overdue.num}}
+          />
+          <hr class="hr-white" />
+
+          <form-userportfel-progressbar
+            title="{{_e('Standard')}}" subtitle="{{_e('Overdue')}}"
+            palette="blue" total_sum="{{formatData(standart.total_sum, 2)}}"
+            total_num={{standart.total_num}}
+            paid_num={{standart.paid.num}}
+            active_num={{standart.active.num}}
+            overdue_num={{standart.overdue.num}}
+          />
+          <hr class="hr-white" />
+
+          <form-userportfel-progressbar
+            title="{{_e('Guarantees')}}" subtitle="{{_e('Overdue')}}"
+            palette="grey" total_sum="{{formatData(guarantee.total_sum, 2)}}"
+            total_num={{guarantee.total_num}}
+            paid_num={{guarantee.paid.num}}
+            active_num={{guarantee.active.num}}
+            overdue_num={{guarantee.overdue.num}}
+          />
+          <hr class="hr-white" />
+
+          <form-userportfel-progressbar
+            title="{{arbitrageTitles[item]}}" subtitle="{{_e('Overdue')}}"
+            palette="lime" total_sum="{{formatData(arbitrage.total_sum, 2)}}"
+            total_num={{arbitrage.total_num}}
+            paid_num={{arbitrage.paid.num}}
+            active_num={{arbitrage.active.num}}
+            overdue_num={{arbitrage.overdue.num}}
+          />
+
+          {{#if !isMyBankZero}}
+            <hr class="hr-white" />
+
+            <form-userportfel-progressbar
+              title="{{_e('My Bank')}}" subtitle="{{_e('Overdue')}}"
+              palette="orange" total_sum="{{formatData(my.total_sum, 2)}}"
+              total_num={{my.total_num}}
+              paid_num={{my.paid.num}}
+              active_num={{my.active.num}}
+              overdue_num={{my.overdue.num}}
+            />
+          {{/if}}
+
+          <hr class="hr-white-1" />
+<!--
+          <span class="legend-dark-orange">{{_e('Paid')}}</span>&nbsp;&nbsp;
+          <span class="legend-orange">{{_e('Active')}}</span>&nbsp;&nbsp;
+          <span class="legend-light-orange">{{_e('Overdue')}}</span>
+          <hr class="hr-white-1" />
+-->
+        </div>
+
+      {{/portfolio}}
+    </div> <!-- end of <div class="row"> -->
+
+  </div>
+  {{/if}}
+
+{{/if}}
+</div>

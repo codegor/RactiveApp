@@ -1,0 +1,9 @@
+<form-group class="{{#class}}{{class}}{{/}}">
+    <label>
+        {{label}}
+        {{#if desc}}
+        <strong class="query-wt hint-{{position_help}}-s-med position-relative {{#if help_anim}}hint-{{help_anim}}{{/if}}" data-hint="{{desc}}">?</strong>
+        {{/if}}
+    </label>
+    <input {{#!disabled}}name="{{form_name}}"{{/}} class="form-control" value='{{value}}' {{#disabled}}disabled="true"{{/}} placeholder="{{placeholder}}"/>
+</form-group>

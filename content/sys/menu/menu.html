@@ -1,0 +1,18 @@
+<ul class="ractive-left-menu-ul">
+  {{#menu:k}}
+    {{#if name}}
+    <li class="bb{{#is_active(k, active)}} menu_active{{/}}{{#if submenu && 1 < obj_length(submenu)}} left-menu-arrow-area{{/if}}">
+      <a name="{{k}}" href='##{{k}}' on-click='load'>{{name}}</a>
+      {{#if submenu && 1 < obj_length(submenu)}}
+      <ul>
+        {{#submenu:s}}
+        <li>
+          <a on-click="submenu">{{.}}</a>
+        </li>
+        {{/}}
+      </ul>
+      {{/if}}
+    </li>
+    {{/if}}
+  {{/}}
+</ul>

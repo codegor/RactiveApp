@@ -1,0 +1,100 @@
+<div id="show-testimonial-container">
+  <div class="testimonial">
+  {{#feedback}}
+
+    <div class="row">
+      <div class="col-xs-3 text-center">
+        <div class="photo-container">
+          <div class="photo-div"
+            style="{{'background-image: url(' + shot_user_data.foto + ');'}}" >
+<!--            <img src="{{shot_user_data.foto}}" class="photo"> -->
+          </div>
+        </div>
+<!--
+        <br><br>
+        <span class="glyphicon glyphicon-thumbs-up"></span> {{like.UP}}
+        <span class="glyphicon glyphicon-thumbs-down"></span> {{like.DOWN}}
+-->
+      </div>
+
+      <div class="col-xs-9">
+        <div class="testimonial-name">{{shot_user_data.name}}</div>
+        <div class="testimonial-id">
+          <span class="id-icon" style="{{id_icon_style}}"></span>
+          <span class="id-number">
+          {{#each orders}}
+            {{#if (@index !== 0)}}, {{/if}}{{.}}
+          {{/each}}
+          </span>
+        </div>
+        <div class="testimonial-rate">
+          <span class="glyphicon glyphicon-star{{#if rating<1}}-empty{{/if}}"></span>
+          <span class="glyphicon glyphicon-star{{#if rating<2}}-empty{{/if}}"></span>
+          <span class="glyphicon glyphicon-star{{#if rating<3}}-empty{{/if}}"></span>
+          <span class="glyphicon glyphicon-star{{#if rating<4}}-empty{{/if}}"></span>
+          <span class="glyphicon glyphicon-star{{#if rating<5}}-empty{{/if}}"></span>
+          <span class="testimonial-date">{{rating_date}}</span>
+        </div>
+        <div class="testimonial-description">{{comment}}</div>
+<!--
+        {{#if isReply}}
+          <div class="testimonial-reply" on-click="toggle_show_reply">
+            {{#if showReply}}{{_e('Hide the reply')}}
+              {{else}}{{_e('See the reply')}}
+            {{/if}}
+          </div>
+        {{elseif isOwner}}
+          <div class="reply-spam">
+            <div class="testimonial-reply-l" on-click="toggle_show_reply">
+              {{#if showReply}}{{_e('Hide the form')}}
+                {{else}}{{_e('Show form to reply')}}
+              {{/if}}
+            </div>
+            <div class="testimonial-reply-r" on-click="report_spam">
+              <input type="checkbox" checked="{{isSpam}}"
+                on-change="spam_cbox_changed" />
+              <span class="spam-label">{{_e('Spam')}}</span>
+            </div>
+          </div>
+        {{/if}}
+
+      </div>
+    </div>
+
+    {{#if (showReply && isReply)}}
+      <div class="row" intro-outro="fade:300">
+        <div class="col-xm-12">
+          <hr />
+          <div class="reply-container">
+            {{#if isOwner}}
+              <span class="reply-name">{{_e('Your reply')}}</span>:
+            {{else}}
+              {{_e('Reply from')}} <span class="reply-name">{{target_user_name}}</span>:
+            {{/if}}
+            <div class="reply-text">{{answer}}</div>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if showReply && !isReply && isOwner}}
+      <div class="row" intro-outro="fade:300">
+        <div class="col-xm-12">
+          <hr />
+          <div class="reply-container">
+            <textarea rows=3 class="textarea-style"
+              placeholder="{{_e('Type in your reply')}}"
+              value="{{answer}}"
+            ></textarea>
+          </div>
+          <div class="reply-container">
+            <span class="reply-form-300">No more than 300 symbols</span>&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-primary pull-right" on-click="send_reply">{{_e('Send')}}</button>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+-->
+  {{/feedback}}
+  </div>
+</div>

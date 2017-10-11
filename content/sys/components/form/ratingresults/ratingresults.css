@@ -1,0 +1,50 @@
+/* http://bootsnipp.com/snippets/featured/rating-card */
+#rating-results-container .glyphicon {
+  /* margin-right: 5px; */
+}
+#rating-results-container .rating .glyphicon {
+  font-size: 22px;
+}
+#rating-results-container .rating-num {
+  margin-top: 0px;
+  font-size: 54px;
+}
+#rating-results-container .progress {
+  margin-bottom: 5px;
+}
+#rating-results-container .progress-bar {
+  text-align: left;
+}
+#rating-results-container .rating-desc .col-md-3 {
+  padding-right: 0px;
+}
+#rating-results-container .sr-only {
+  margin-left: 5px;
+  margin-top: 1px;
+  overflow: visible;
+  clip: auto;
+}
+
+#rating-results-container .blue-wt {
+  color: #3190f0; /* #0091f4; */
+}
+#rating-results-container .bar-colors {
+  color: black;
+  background-color: #d5e8fc;
+}
+#rating-results-container .no-shadow {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#rating-results-container .no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#rating-results-container .no-rates {
+  font-size: 18px;
+  margin-top: 20px;
+}
+#rating-results-container .no-rates-1 {
+  margin-top: 20px;
+}

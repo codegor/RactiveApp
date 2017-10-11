@@ -1,0 +1,8 @@
+#view-docs-images-container {
+}
+
+#view-docs-images-container .doc_icon {
+  float: left;
+  margin: 0px 0px 0 0;
+  cursor: pointer;
+}

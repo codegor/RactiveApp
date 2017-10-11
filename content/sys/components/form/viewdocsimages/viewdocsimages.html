@@ -1,0 +1,11 @@
+<div id="view-docs-images-container">
+  <div>
+    {{#docs:k}}
+      <a class="doc_icon" on-click="show_docs"
+        title="{{#if docs_img[k] === 'passport.png'}}Passport photo{{else}}Document photo{{/if}}"
+      >
+        <img src="{{social_img}}{{docs_img[k]}}">
+      </a>
+    {{/}}
+  </div>
+</div>

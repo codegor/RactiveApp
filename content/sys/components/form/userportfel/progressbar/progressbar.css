@@ -1,0 +1,69 @@
+.blue-wt {
+  color: #3190f0;
+}
+.orange-wt {
+  color: #ff5000;
+}
+.grey-wt {
+  color: #4a5866;
+}
+.lime-wt {
+  color: #827717; /* #9e9d24; */
+}
+
+.user-portfel-progress-bar .bar-dark-blue {
+  color: black;
+  background-color: #3190f0;
+}
+.user-portfel-progress-bar .bar-blue {
+  color: black;
+  background-color: #72b2f1; /* #3190f0; */
+}
+.user-portfel-progress-bar .bar-light-blue {
+  color: black;
+  background-color: #b4d4f3; /* #d5e8fc; */
+}
+
+.user-portfel-progress-bar .bar-dark-orange {
+  color: black;
+  background-color: #ff5000;
+}
+.user-portfel-progress-bar .bar-orange {
+  color: black;
+  background-color: #f98855; /* #ff5000; */
+}
+.user-portfel-progress-bar .bar-light-orange {
+  color: black;
+  background-color: #f2c0aa; /* #fba576; */
+}
+
+.user-portfel-progress-bar .bar-dark-grey {
+  color: black;
+  background-color: #4a5866;
+}
+.user-portfel-progress-bar .bar-grey {
+  color: black;
+  background-color: #838d97;
+}
+.user-portfel-progress-bar .bar-light-grey {
+  color: black;
+  background-color: #bcc3c9;
+}
+
+.user-portfel-progress-bar .bar-dark-lime {
+  color: black;
+  background-color: #9e9d24; /* #827717 */
+}
+.user-portfel-progress-bar .bar-lime {
+  color: black;
+  background-color: #cddc39;
+}
+.user-portfel-progress-bar .bar-light-lime {
+  color: black;
+  background-color: #f0f4c3;
+}
+
+.user-portfel-progress-bar .no-shadow {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

@@ -1,0 +1,26 @@
+.component-form-wp-load-img button.remove_img {
+    width: auto !important;
+    background: #fff !important;
+    float: left;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    margin-top: -46px !important;
+    font-size: 22px;
+    margin-left: 240px;
+    margin-right: -12px;
+}
+
+.component-form-wp-load-img button.remove_img:hover{
+	 border: 0 !important;
+	 background: #fff !important;
+	 opacity: 0.6 !important;
+}
+
+
+.component-form-wp-load-img img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 140px;
+    margin-top: 14px;
+}
