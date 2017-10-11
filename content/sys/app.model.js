@@ -32,9 +32,6 @@ var AppBase = Ractive.extend({
       windows: function(){
         Ractive.requireSysPart('windows');
       },
-      info: function(){
-        Ractive.requireSysPart('info');
-      },
       showLoader: function(){
         if(0 >= this.loader_count){
           this.showLoader();
@@ -54,7 +51,6 @@ var AppBase = Ractive.extend({
   oncomplete: function(){
     this.fire('menu');
     this.fire('windows');
-    this.fire('info');
     this.setHistoryEvent();
   },
   showLoader: function(){
